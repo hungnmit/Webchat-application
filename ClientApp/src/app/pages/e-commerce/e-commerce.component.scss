@@ -1,0 +1,37 @@
+@import '../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card {
+    transform: translate3d(0, 0, 0);
+  }
+}
+::ng-deep {
+  ng2-smart-table {
+    table {
+      tbody {
+        /* Alternating row colour */
+        tr:nth-child(2n) {
+          background-color: nb-theme(color-basic-100);
+        }
+        tr:hover {
+          background-color: nb-theme(color-basic-100) !important;
+        }
+      }
+
+      /* headers */
+      tr.ng2-smart-titles th {
+        a {
+          font-weight: bold !important;
+        }
+        background-color: nb-theme(color-primary-500);
+        a {
+          color: nb-theme(color-basic-100);
+        }
+        a.sort.desc::after, a.sort.asc::after {
+          // arrow colour
+          border-bottom-color: nb-theme(color-basic-100);
+        }
+      }
+    }
+  }
+}
