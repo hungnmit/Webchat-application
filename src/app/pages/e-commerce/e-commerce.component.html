@@ -4,7 +4,7 @@
     </nb-card-header>
   
     <nb-card-body>
-      <span [ngClass]="classToApply" style="color: red;">{{renderValue}}</span>
+      <!-- <span [ngClass]="classToApply" style="color: red;">{{renderValue}}</span> -->
       <ng2-smart-table [settings]="settings" [source]="source"  (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onSaveConfirm($event)"
       (createConfirm)="onCreateConfirm($event)">
       </ng2-smart-table> 
